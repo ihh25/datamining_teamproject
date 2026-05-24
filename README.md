@@ -46,20 +46,6 @@ python 02_collect_kma.py
 python 03_merge_preprocess.py
 ```
 
-## ⚠️ 주의사항
-
-1. **KOBIS 일별 박스오피스는 약 1,100번의 API 호출이 필요**합니다.
-   - `time.sleep(0.1)` 적용으로 약 2~3분 소요
-   - 일일 호출 제한이 있을 수 있으니 필요시 분할 실행
-   - 중간에 끊기면 이미 받은 부분은 무시하고 재시작 가능
-
-2. **API 키는 절대 GitHub 등에 올리지 마세요**
-   - 환경변수로 분리하는 것을 권장: `os.getenv("KOBIS_KEY")`
-
-3. **공휴일 리스트는 검증 필요**
-   - `03_merge_preprocess.py`의 `KOREAN_HOLIDAYS`는 일반적인 일정 기준
-   - 2026년 부처님오신날 등 정확한 일자는 추후 검증 필요
-
 ## 📊 최종 산출물: `final_dataset.csv`
 
 총 52개 변수가 포함된 일별 데이터셋:
